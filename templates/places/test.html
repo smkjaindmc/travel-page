@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Touronto</title>
+      <style>
+          .num{
+              height: 320px;
+              background-image: url(/static/nature3.jpg)
+          }
+          .net{
+              text-align: center;
+              color: white;
+              margin-top: 40px;
+          }
+          .search{
+              height: 50px;
+              margin-top: 35px;
+          }
+          .fot{
+              height: 50px;
+              background-color: lightpink;
+              opacity: 0.8;
+          }
+          .seap{
+              margin-left: 30px;
+          }
+          .place{
+              margin-top: 40px;
+              
+          }
+          .boy{
+              font-size: 16px;
+              margin-left: 10px;
+              color: rgb(76,100,120);
+              margin-top: 8px;
+          }
+          .fan{
+              margin-left: 10px;
+              font-size: 18px;
+          }
+          span{
+              color: rgb(100,90,102);
+              font-size: 16px;
+          }
+          .ban{
+              margin-left: 90px;
+          }
+          .goa{
+              margin-left: 8px;
+          }
+          button{
+              margin-left: 8px;
+              text-align: center;
+              
+          }
+          .koy{
+              font-size: 16px;
+          }
+          .goy{
+              height: 30px;
+          }
+      </style>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link koy" href="#"><i class="fa fa-grav" aria-hidden="true"></i>
+ Touronto</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2 goy">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item  active dropdown">
+      <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#one">Beaches</a>
+        <a class="dropdown-item" href="#two">Mountains</a>
+        <div role="separator" class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#three">Heritage</a>
+      </div>
+    </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Forum</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Hotels</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Holidays</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Sign in</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div class="jumbotron jumbotron-fluid num">
+       <h1 class="net">Exclusive Tours & Holiday Packages</h1>
+        <div class="mx-auto" style="width: 200px;">
+         <input  class="search" type="text" placeholder="Search for destinations" >
+</div>
+        </div>
+      <div class="container-fluid seap">
+            <h3>Book a customizable tour package</h3>
+          <div class="row">
+              {% for i in place %}
+            <div class='col-md-3'>
+                <div class="place">
+                    <a href=""><img src="/static/media/{{i.image}}"></a>
+                    <p class="boy">{{i.title}}</p>
+                    <p class="fan">Rs {{i.price}}   <span>per person</span><i class="fa fa-bed ban" aria-hidden="true"></i><i class="fa fa-plane goa" aria-hidden="true"></i><i class="fa fa-cutlery goa" aria-hidden="true"></i></p>
+                    <br><button type="button" class="btn btn-success">Customise and Get Qoutes</button>
+                    
+             </div>
+            </div>
+        {% endfor %}
+              </div> 
+          </div>
+          
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
